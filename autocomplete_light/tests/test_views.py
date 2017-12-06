@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import autocomplete_light.shortcuts as autocomplete_light
 import six
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import Client, RequestFactory, TestCase
 from django.utils.encoding import force_text
 
@@ -18,7 +18,6 @@ except ImportError:
     from django.contrib.auth.models import User
 else:
     User = get_user_model()
-
 
 
 class RegistryViewTestCase(TestCase):
